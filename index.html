@@ -79,7 +79,7 @@
     <section id="hero" class="hero">
       <hgroup>
         <h1 data-i18n="hero.headline">Vimerk builds small, low-maintenance digital products.</h1>
-        <p data-i18n="hero.subheadline">APIs, applied ML tools, and pragmatic AI services.</p>
+        <p data-i18n="hero.subheadline">Small, precise, durable technical products. Built solo. Built to last.</p>
       </hgroup>
 
       <div class="cta-group">
@@ -88,13 +88,30 @@
       </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+      <article>
+        <p data-i18n="about.intro">
+          Vimerk is a solo digital products company based in Uppsala, Sweden. We build small, precise, and durable technical products: APIs, applied machine-learning tools, and AI-assisted services that solve real problems with minimal operational overhead.
+        </p>
+        <p data-i18n="about.positioning">
+          This is not a startup chasing scale for its own sake. It's a long-term, independent engineering practice—productized.
+        </p>
+        <p data-i18n="about.belief">
+          Most digital products fail not because the ideas are bad, but because they are overengineered, overpromised, and overdependent on complexity or constant intervention. Vimerk exists to do the opposite.
+        </p>
+      </article>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects">
       <h2 data-i18n="projects.title">Projects</h2>
+      <p class="section-intro" data-i18n="projects.intro">Small, focused tools solving narrow, well-defined problems.</p>
 
       <div class="project-grid">
         <!-- Nomacore -->
         <article class="project-card">
+          <small class="project-category" data-i18n="projects.nomacore.category">Commercial Intelligence API</small>
           <header>
             <h3>Nomacore</h3>
             <span class="badge" data-i18n="projects.badge.tba">TBA</span>
@@ -104,6 +121,7 @@
 
         <!-- Talaria -->
         <article class="project-card">
+          <small class="project-category" data-i18n="projects.talaria.category">Applied Machine Learning</small>
           <header>
             <h3>Talaria</h3>
             <span class="badge" data-i18n="projects.badge.tba">TBA</span>
@@ -113,6 +131,7 @@
 
         <!-- TinyFutures -->
         <article class="project-card">
+          <small class="project-category" data-i18n="projects.tinyfutures.category">AI-Assisted Photography</small>
           <header>
             <h3>TinyFutures</h3>
             <span class="badge" data-i18n="projects.badge.tba">TBA</span>
@@ -126,38 +145,45 @@
             <h3 data-i18n="projects.more.title">More Planned</h3>
             <span class="badge" data-i18n="projects.badge.planned">Planned</span>
           </header>
-          <p data-i18n="projects.more.desc">Additional apps, websites, and social media content generation tools with productized, low-support models.</p>
+          <p data-i18n="projects.more.desc">Utilities that often begin as internal tools—becoming products only when they prove genuinely useful.</p>
         </article>
       </div>
     </section>
 
     <!-- Principles Section -->
     <section id="principles">
-      <hgroup>
-        <h2 data-i18n="principles.title">Principles</h2>
-        <p data-i18n="principles.subtitle">Core design philosophy guiding all Vimerk projects.</p>
-      </hgroup>
+      <h2 data-i18n="principles.title">Principles</h2>
 
       <div class="principles-grid">
         <article>
-          <h3 data-i18n="principles.scope.title">Small scope, clear boundaries</h3>
-          <p data-i18n="principles.scope.desc">Every project has well-defined limits. No feature creep, no endless roadmaps.</p>
+          <h3 data-i18n="principles.solo.title">Solo-Engineered, Solo-Maintained</h3>
+          <p data-i18n="principles.solo.desc">If one person can't build, deploy, and maintain it with minimal ongoing attention, it doesn't belong at Vimerk.</p>
         </article>
 
         <article>
-          <h3 data-i18n="principles.maintenance.title">Low maintenance by design</h3>
-          <p data-i18n="principles.maintenance.desc">Built to run reliably with minimal ongoing intervention. Simplicity over complexity.</p>
+          <h3 data-i18n="principles.scope.title">Narrow Scope, Clear Boundaries</h3>
+          <p data-i18n="principles.scope.desc">Each product solves one well-defined problem. Ambiguity is a liability, not a feature.</p>
         </article>
 
         <article>
-          <h3 data-i18n="principles.ai.title">Pragmatic AI usage</h3>
-          <p data-i18n="principles.ai.desc">AI where it adds genuine value, not for novelty. Applied machine learning focused on practical outcomes.</p>
+          <h3 data-i18n="principles.ai.title">AI as Tool, Not Identity</h3>
+          <p data-i18n="principles.ai.desc">Used where it adds genuine leverage. Avoided where deterministic or statistical methods are superior. Never an excuse for opacity.</p>
         </article>
 
         <article>
-          <h3 data-i18n="principles.resilience.title">Portfolio resilience</h3>
-          <p data-i18n="principles.resilience.desc">Multiple independent projects reduce single-point dependency. Diversified by design.</p>
+          <h3 data-i18n="principles.builttolast.title">Built to Last, Not to Exit</h3>
+          <p data-i18n="principles.builttolast.desc">Every project must stand alone economically—able to generate revenue independently or be shut down without threatening the rest.</p>
         </article>
+      </div>
+
+      <!-- What We Don't Build Callout -->
+      <div class="avoid-callout">
+        <h3 data-i18n="avoid.title">What We Don't Build</h3>
+        <ul>
+          <li data-i18n="avoid.vc">No venture-capital dependency</li>
+          <li data-i18n="avoid.growth">No growth-at-all-costs strategies</li>
+          <li data-i18n="avoid.greyzone">No regulatory grey zones</li>
+        </ul>
       </div>
     </section>
 
@@ -233,9 +259,12 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-tagline" data-i18n="footer.tagline">Independent engineering practice. Uppsala, Sweden. Built to last.</p>
       <p data-i18n="footer.analytics">Static site. No analytics by default. Project pages will be added progressively.</p>
       <p>
         <small>&copy; 2025 Vimerk. <a href="mailto:www@vimerk.com">www@vimerk.com</a></small>
+        <span class="footer-divider">·</span>
+        <small><a href="/manifesto.html" data-i18n="footer.manifesto">Company Manifesto</a></small>
       </p>
     </div>
   </footer>

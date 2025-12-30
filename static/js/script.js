@@ -20,39 +20,53 @@ const translations = {
 
     // Hero
     'hero.headline': 'Vimerk builds small, low-maintenance digital products.',
-    'hero.subheadline': 'APIs, applied ML tools, and pragmatic AI services.',
+    'hero.subheadline': 'Small, precise, durable technical products. Built solo. Built to last.',
     'hero.cta1': 'Explore projects',
     'hero.cta2': 'Follow updates',
 
+    // About
+    'about.intro': 'Vimerk is a solo digital products company based in Uppsala, Sweden. We build small, precise, and durable technical products: APIs, applied machine-learning tools, and AI-assisted services that solve real problems with minimal operational overhead.',
+    'about.positioning': 'This is not a startup chasing scale for its own sake. It's a long-term, independent engineering practice—productized.',
+    'about.belief': 'Most digital products fail not because the ideas are bad, but because they are overengineered, overpromised, and overdependent on complexity or constant intervention. Vimerk exists to do the opposite.',
+
     // Projects
     'projects.title': 'Projects',
+    'projects.intro': 'Small, focused tools solving narrow, well-defined problems.',
     'projects.badge.tba': 'TBA',
     'projects.badge.planned': 'Planned',
 
+    'projects.nomacore.category': 'Commercial Intelligence API',
     'projects.nomacore.desc': 'Commercial intelligence API deriving demographic insights from customer names and addresses.',
 
+    'projects.talaria.category': 'Applied Machine Learning',
     'projects.talaria.desc': 'Quantitative trading system generating signals and predictions for swing trading strategies.',
 
+    'projects.tinyfutures.category': 'AI-Assisted Photography',
     'projects.tinyfutures.desc': 'Playful tool to visualize how babies and young children might look as adults.',
 
     'projects.more.title': 'More Planned',
-    'projects.more.desc': 'Additional apps, websites, and social media content generation tools with productized, low-support models.',
+    'projects.more.desc': 'Utilities that often begin as internal tools—becoming products only when they prove genuinely useful.',
 
     // Principles
     'principles.title': 'Principles',
-    'principles.subtitle': 'Core design philosophy guiding all Vimerk projects.',
 
-    'principles.scope.title': 'Small scope, clear boundaries',
-    'principles.scope.desc': 'Every project has well-defined limits. No feature creep, no endless roadmaps.',
+    'principles.solo.title': 'Solo-Engineered, Solo-Maintained',
+    'principles.solo.desc': 'If one person can\'t build, deploy, and maintain it with minimal ongoing attention, it doesn\'t belong at Vimerk.',
 
-    'principles.maintenance.title': 'Low maintenance by design',
-    'principles.maintenance.desc': 'Built to run reliably with minimal ongoing intervention. Simplicity over complexity.',
+    'principles.scope.title': 'Narrow Scope, Clear Boundaries',
+    'principles.scope.desc': 'Each product solves one well-defined problem. Ambiguity is a liability, not a feature.',
 
-    'principles.ai.title': 'Pragmatic AI usage',
-    'principles.ai.desc': 'AI where it adds genuine value, not for novelty. Applied machine learning focused on practical outcomes.',
+    'principles.ai.title': 'AI as Tool, Not Identity',
+    'principles.ai.desc': 'Used where it adds genuine leverage. Avoided where deterministic or statistical methods are superior. Never an excuse for opacity.',
 
-    'principles.resilience.title': 'Portfolio resilience',
-    'principles.resilience.desc': 'Multiple independent projects reduce single-point dependency. Diversified by design.',
+    'principles.builttolast.title': 'Built to Last, Not to Exit',
+    'principles.builttolast.desc': 'Every project must stand alone economically—able to generate revenue independently or be shut down without threatening the rest.',
+
+    // What We Don't Build
+    'avoid.title': 'What We Don\'t Build',
+    'avoid.vc': 'No venture-capital dependency',
+    'avoid.growth': 'No growth-at-all-costs strategies',
+    'avoid.greyzone': 'No regulatory grey zones',
 
     // Follow Updates
     'updates.title': 'Follow Updates',
@@ -78,7 +92,9 @@ const translations = {
     'contact.alternative': 'Prefer email? You can also write directly to ',
 
     // Footer
+    'footer.tagline': 'Independent engineering practice. Uppsala, Sweden. Built to last.',
     'footer.analytics': 'Static site. No analytics by default. Project pages will be added progressively.',
+    'footer.manifesto': 'Company Manifesto',
 
     // Thanks Page
     'thanks.meta.title': 'Thank you - Vimerk',
@@ -103,39 +119,53 @@ const translations = {
 
     // Hero
     'hero.headline': 'Vimerk bygger små, lättunderhållna digitala produkter.',
-    'hero.subheadline': 'API:er, tillämpade ML-verktyg och pragmatiska AI-tjänster.',
+    'hero.subheadline': 'Små, precisa, varaktiga tekniska produkter. Byggd solo. Byggd för att bestå.',
     'hero.cta1': 'Utforska projekt',
     'hero.cta2': 'Följ uppdateringar',
 
+    // About
+    'about.intro': 'Vimerk är ett solo digitalt produktföretag baserat i Uppsala, Sverige. Vi bygger små, precisa och varaktiga tekniska produkter: API:er, tillämpade maskininlärningsverktyg och AI-assisterade tjänster som löser verkliga problem med minimalt driftskostnader.',
+    'about.positioning': 'Detta är inte en startup som jagar tillväxt för sin egen skull. Det är en långsiktig, oberoende ingenjörspraxis—produktifierad.',
+    'about.belief': 'De flesta digitala produkter misslyckas inte för att idéerna är dåliga, utan för att de är överkomplicerade, överlovade och beroende av komplexitet eller ständig intervention. Vimerk finns för att göra tvärtom.',
+
     // Projects
     'projects.title': 'Projekt',
+    'projects.intro': 'Små, fokuserade verktyg som löser smala, väldefinierade problem.',
     'projects.badge.tba': 'Kommer',
     'projects.badge.planned': 'Planerat',
 
+    'projects.nomacore.category': 'Kommersiell Intelligens-API',
     'projects.nomacore.desc': 'Kommersiell intelligens-API som härleder demografiska insikter från kundnamn och adresser.',
 
+    'projects.talaria.category': 'Tillämpad Maskininlärning',
     'projects.talaria.desc': 'Kvantitativt handelssystem som genererar signaler och prediktioner för swing trading-strategier.',
 
+    'projects.tinyfutures.category': 'AI-Assisterad Fotografi',
     'projects.tinyfutures.desc': 'Lekfullt verktyg för att visualisera hur bebisar och småbarn kan se ut som vuxna.',
 
     'projects.more.title': 'Fler planerade',
-    'projects.more.desc': 'Ytterligare appar, webbplatser och verktyg för generering av innehåll för sociala medier med produktifierade, lågsupport-modeller.',
+    'projects.more.desc': 'Verktyg som ofta börjar som interna projekt—blir produkter endast när de visar sig genuint användbara.',
 
     // Principles
     'principles.title': 'Principer',
-    'principles.subtitle': 'Kärnfilosofi som vägleder alla Vimerk-projekt.',
 
-    'principles.scope.title': 'Liten omfattning, tydliga gränser',
-    'principles.scope.desc': 'Varje projekt har väldefinierade gränser. Ingen funktionskrypning, inga oändliga färdplaner.',
+    'principles.solo.title': 'Solo-Konstruerad, Solo-Underhållen',
+    'principles.solo.desc': 'Om en person inte kan bygga, distribuera och underhålla det med minimal pågående uppmärksamhet, hör det inte hemma på Vimerk.',
 
-    'principles.maintenance.title': 'Lågunderhåll genom design',
-    'principles.maintenance.desc': 'Byggd för att köra tillförlitligt med minimal pågående intervention. Enkelhet framför komplexitet.',
+    'principles.scope.title': 'Smal Omfattning, Tydliga Gränser',
+    'principles.scope.desc': 'Varje produkt löser ett väldefinierat problem. Tvetydighet är en skuld, inte en funktion.',
 
-    'principles.ai.title': 'Pragmatisk AI-användning',
-    'principles.ai.desc': 'AI där det ger verkligt värde, inte för nyhets skull. Tillämpad maskininlärning fokuserad på praktiska resultat.',
+    'principles.ai.title': 'AI som Verktyg, Inte Identitet',
+    'principles.ai.desc': 'Används där det ger genuint utnyttjande. Undviks där deterministiska eller statistiska metoder är överlägsna. Aldrig en ursäkt för opacitet.',
 
-    'principles.resilience.title': 'Portföljmotståndskraft',
-    'principles.resilience.desc': 'Flera oberoende projekt minskar enskilda beroenden. Diversifierat genom design.',
+    'principles.builttolast.title': 'Byggd för att Bestå, Inte för Exit',
+    'principles.builttolast.desc': 'Varje projekt måste stå ekonomiskt självständigt—kunna generera intäkter oberoende eller stängas ner utan att hota resten.',
+
+    // What We Don't Build
+    'avoid.title': 'Vad Vi Inte Bygger',
+    'avoid.vc': 'Inget riskkapitalberoende',
+    'avoid.growth': 'Inga tillväxt-till-varje-pris strategier',
+    'avoid.greyzone': 'Inga regulatoriska gråzoner',
 
     // Follow Updates
     'updates.title': 'Följ uppdateringar',
@@ -161,7 +191,9 @@ const translations = {
     'contact.alternative': 'Föredrar e-post? Du kan också skriva direkt till ',
 
     // Footer
+    'footer.tagline': 'Oberoende ingenjörspraxis. Uppsala, Sverige. Byggd för att bestå.',
     'footer.analytics': 'Statisk webbplats. Ingen analys som standard. Projektsidor kommer att läggas till progressivt.',
+    'footer.manifesto': 'Företagsmanifest',
 
     // Thanks Page
     'thanks.meta.title': 'Tack - Vimerk',
