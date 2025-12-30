@@ -4,13 +4,14 @@ A minimal, bilingual (EN/SV) static homepage for Vimerk - a modern product studi
 
 ## Overview
 
-This is a single-page static site deployed on Netlify, showcasing Vimerk's portfolio, principles, and providing a contact mechanism. The site requires zero backend infrastructure and minimal ongoing maintenance.
+This is a single-page static site deployed on Cloudflare Pages, showcasing Vimerk's portfolio, principles, and providing a contact mechanism. The site requires zero backend infrastructure and minimal ongoing maintenance.
 
 ## Technical Stack
 
 - **Pure HTML/CSS/JS** - No build process required
 - **Pico.css** - Lightweight CSS framework (~10KB) for semantic, minimal styling
-- **Netlify Forms** - Contact form with spam protection (honeypot)
+- **Web3Forms** - Contact form service with unlimited free submissions
+- **Cloudflare Pages** - Static hosting with unlimited bandwidth (free tier)
 - **localStorage** - Language preference persistence
 - **Dark theme** - Modern, technical aesthetic with blue-purple gradient accents
 
@@ -59,6 +60,8 @@ This is a single-page static site deployed on Netlify, showcasing Vimerk's portf
 /workspace/vimerk/www/
 ├── index.html              # Main single-page site
 ├── thanks.html             # Form submission thank-you page
+├── _headers                # Cloudflare Pages headers config
+├── _redirects              # Cloudflare Pages redirects config
 ├── static/
 │   ├── css/
 │   │   └── styles.css      # Custom styles (overrides/brand)
@@ -68,7 +71,7 @@ This is a single-page static site deployed on Netlify, showcasing Vimerk's portf
 │   │   ├── logo.svg        # Geometric brand mark
 │   │   ├── favicon.svg     # Matching favicon
 │   │   └── og.png          # Open Graph placeholder
-├── netlify.toml            # Netlify configuration
+├── DEPLOYMENT.md           # Complete deployment guide
 ├── PROMPT.md               # Original requirements
 └── README.md               # This file
 ```
@@ -79,7 +82,7 @@ This is a single-page static site deployed on Netlify, showcasing Vimerk's portf
 2. **Projects** - Grid of 6 project cards (all TBA/coming soon)
 3. **Principles** - 4 core design principles
 4. **Follow Updates** - Social media placeholder (no URLs yet)
-5. **Contact** - Netlify form + direct email option
+5. **Contact** - Web3Forms contact form + direct email option
 6. **Footer** - Minimal, no analytics statement
 
 ## Features
@@ -90,12 +93,13 @@ This is a single-page static site deployed on Netlify, showcasing Vimerk's portf
 - Updates all text, HTML lang attribute, and meta tags
 - Graceful fallback if localStorage unavailable
 
-### Contact Form (Netlify)
+### Contact Form (Web3Forms)
 - Fields: Name, Email, Topic (dropdown), Message
-- Honeypot spam protection
+- Honeypot spam protection (botcheck)
 - Client-side HTML5 validation
 - Redirects to `/thanks.html` on success
-- Notifications sent to www@vimerk.com (configured in Netlify dashboard)
+- Email notifications sent to www@vimerk.com
+- Unlimited free submissions (no paid tier needed)
 
 ### Accessibility
 - Semantic HTML5 structure
@@ -114,51 +118,39 @@ This is a single-page static site deployed on Netlify, showcasing Vimerk's portf
 
 ## Deployment
 
-### Netlify Setup
+**See [DEPLOYMENT.md](DEPLOYMENT.md) for complete step-by-step instructions.**
 
-1. **Connect repository or drag-and-drop:**
-   ```bash
-   # If using Netlify CLI:
-   netlify deploy --prod --dir=.
-   ```
+### Quick Start
 
-2. **Build settings:**
-   - Build command: (none)
-   - Publish directory: `.` (root)
-   - No build process required
+1. **Set up Web3Forms:** Get free access key at https://web3forms.com
+2. **Update form:** Replace `YOUR_ACCESS_KEY_HERE` in `index.html` (line 214)
+3. **Deploy to Cloudflare Pages:** Connect GitHub repo via Cloudflare dashboard
+4. **Add custom domain:** Configure `vimerk.com` in Cloudflare Pages settings
 
-3. **Form notifications:**
-   - Go to: Site settings → Forms → Form notifications
-   - Add notification email: `www@vimerk.com`
-   - Netlify will auto-detect the form via `data-netlify="true"`
-
-4. **Custom domain:**
-   - Add domain: `vimerk.com`
-   - Configure DNS (Netlify provides nameservers)
-   - SSL certificate auto-provisioned
-
-### Environment
+### Key Facts
+- **Build command:** None (pure static files)
+- **Output directory:** `/` (root)
 - **Node.js:** Not required
-- **Build process:** None (pure static files)
-- **Runtime:** Client-side only
+- **Cost:** $0/month (unlimited bandwidth + unlimited form submissions)
+- **Commercial use:** ✅ Allowed on free tier
 
 ## Local Development
 
-Simply open `index.html` in a browser:
+Test the site locally:
 
 ```bash
-# Option 1: Direct file open
+# Option 1: Direct file open (quick view, form won't work)
 open index.html
 
-# Option 2: Simple HTTP server (for testing form redirects)
+# Option 2: Simple HTTP server (recommended)
 python3 -m http.server 8000
 # Then visit: http://localhost:8000
 
-# Option 3: Netlify Dev (for testing forms locally)
-netlify dev
+# Option 3: Using Wrangler (Cloudflare's CLI)
+npx wrangler pages dev .
 ```
 
-**Note:** Netlify forms won't work when opening directly from file system. Use a local server or Netlify Dev for full testing.
+**Note:** Web3Forms requires internet connection. Form will work from localhost:8000, but you'll receive actual emails.
 
 ## Content Management
 
@@ -213,7 +205,7 @@ To update content:
 
 - **Analytics:** None by default (stated in footer)
 - **Cookies:** Only localStorage for language preference
-- **Forms:** Data processed by Netlify, sent to www@vimerk.com
+- **Forms:** Data processed by Web3Forms, emailed to www@vimerk.com
 - **Code:** Proprietary (Vimerk internal)
 
 ## Maintenance

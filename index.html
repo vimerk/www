@@ -209,12 +209,17 @@
         <p data-i18n="contact.subtitle">Get in touch for inquiries or collaboration.</p>
       </hgroup>
 
-      <form name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+      <form method="POST" action="https://api.web3forms.com/submit">
+        <!-- Web3Forms Access Key - Get yours at https://web3forms.com -->
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+        <!-- Optional: Redirect to thank you page after submission -->
+        <input type="hidden" name="redirect" value="https://vimerk.com/thanks.html">
+
         <!-- Honeypot field for spam protection -->
-        <input type="hidden" name="form-name" value="contact">
         <p class="hidden">
           <label>
-            Don't fill this out if you're human: <input name="bot-field">
+            Don't fill this out if you're human: <input type="checkbox" name="botcheck" style="display: none;">
           </label>
         </p>
 

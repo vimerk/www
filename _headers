@@ -1,0 +1,23 @@
+# Cloudflare Pages Custom Headers
+# https://developers.cloudflare.com/pages/platform/headers/
+
+# Security headers for all pages
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; frame-ancestors 'self';
+
+# Cache static assets for 1 year
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache SVG files
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache HTML with shorter duration
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate

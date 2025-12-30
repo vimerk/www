@@ -1,133 +1,188 @@
 # Vimerk.com Deployment Guide
 
-## Quick Start - Deploy to Netlify
+## Quick Start - Deploy to Cloudflare Pages
 
-### Option 1: Netlify CLI (Fastest)
+### Prerequisites
+- GitHub account with your code pushed
+- Cloudflare account (free tier works perfectly)
+
+---
+
+## Step 1: Set Up Web3Forms (Contact Form)
+
+### Get Your Free Access Key
+
+1. Go to **https://web3forms.com**
+2. Click **"Create Access Key"**
+3. Enter your email: **www@vimerk.com**
+4. Click **"Create Access Key"**
+5. **Copy the access key** (looks like: `a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6`)
+6. Check your email and verify it
+
+### Update the Form
+
+1. Open `index.html`
+2. Find this line (around line 214):
+   ```html
+   <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+   ```
+3. Replace `YOUR_ACCESS_KEY_HERE` with your actual access key
+4. Save the file
+
+**IMPORTANT:** Also update the redirect URL on line 217 to match your final domain:
+```html
+<input type="hidden" name="redirect" value="https://vimerk.com/thanks.html">
+```
+(Use your actual domain once you set it up)
+
+---
+
+## Step 2: Deploy to Cloudflare Pages
+
+### Option A: Via Cloudflare Dashboard (Recommended)
+
+1. **Login to Cloudflare**
+   - Go to https://dash.cloudflare.com
+   - Login or create free account
+
+2. **Connect Your Repository**
+   - Click **"Workers & Pages"** in left sidebar
+   - Click **"Create application"**
+   - Click **"Pages"** tab
+   - Click **"Connect to Git"**
+   - Authorize Cloudflare to access your GitHub
+   - Select your repository (works with GitHub Organizations on free tier!)
+
+3. **Configure Build Settings**
+   - **Project name:** `vimerk` (or your choice)
+   - **Production branch:** `main`
+   - **Build command:** (leave empty)
+   - **Build output directory:** `/` (root)
+   - Click **"Save and Deploy"**
+
+4. **Wait for Deployment**
+   - First deploy takes ~1-2 minutes
+   - You'll get a URL like: `vimerk.pages.dev`
+
+### Option B: Via Wrangler CLI
 
 ```bash
-# Install Netlify CLI (if not already installed)
-npm install -g netlify-cli
+# Install Wrangler
+npm install -g wrangler
 
-# Login to Netlify
-netlify login
+# Login to Cloudflare
+wrangler login
 
-# Deploy from the /workspace/vimerk/www directory
+# Deploy
 cd /workspace/vimerk/www
-netlify deploy --prod
-
-# Follow prompts:
-# - Create & configure new site? Yes
-# - Publish directory: . (current directory)
+wrangler pages deploy . --project-name=vimerk
 ```
 
-### Option 2: Netlify Dashboard (Drag & Drop)
+---
 
-1. Go to [app.netlify.com](https://app.netlify.com)
-2. Click "Add new site" → "Deploy manually"
-3. Drag the entire `/workspace/vimerk/www` folder into the upload area
-4. Wait for deployment to complete
+## Step 3: Set Up Custom Domain
 
-### Option 3: Git Integration (Recommended for ongoing updates)
+### Add vimerk.com to Cloudflare Pages
 
-1. Initialize git repository:
-   ```bash
-   cd /workspace/vimerk/www
-   git init
-   git add .
-   git commit -m "Initial commit: Vimerk homepage"
-   ```
+1. **In Cloudflare Dashboard:**
+   - Go to **Workers & Pages** → Your site
+   - Click **"Custom domains"** tab
+   - Click **"Set up a custom domain"**
+   - Enter: `vimerk.com`
+   - Click **"Continue"**
 
-2. Push to GitHub/GitLab:
-   ```bash
-   # Create a repo on GitHub first, then:
-   git remote add origin <your-repo-url>
-   git push -u origin main
-   ```
+2. **DNS Configuration:**
 
-3. Connect to Netlify:
-   - Go to [app.netlify.com](https://app.netlify.com)
-   - Click "Add new site" → "Import an existing project"
-   - Choose your Git provider and repository
-   - Build settings:
-     - Build command: (leave empty)
-     - Publish directory: `.` (root)
-   - Deploy site
+   **If domain is already on Cloudflare:**
+   - DNS records will be added automatically
+   - Done! ✅
 
-## Post-Deployment Configuration
+   **If domain is NOT on Cloudflare:**
+   - Option A: Transfer DNS to Cloudflare (recommended)
+     - Follow prompts to change nameservers at your registrar
+   - Option B: Add CNAME record at your current DNS provider
+     - Add CNAME: `vimerk.com` → `vimerk.pages.dev`
+     - May need to flatten/ALIAS record for root domain
 
-### 1. Configure Form Notifications
+3. **SSL Certificate**
+   - Auto-provisioned by Cloudflare (usually < 1 minute)
+   - No action needed
 
-**CRITICAL:** Set up email notifications for contact form submissions:
+4. **Add www subdomain (optional):**
+   - Click **"Set up a custom domain"** again
+   - Enter: `www.vimerk.com`
+   - Cloudflare will auto-redirect www → non-www
 
-1. Go to: **Site Settings → Forms → Form notifications**
-2. Click **"Add notification"**
-3. Select **"Email notification"**
-4. Enter email: **www@vimerk.com**
-5. Select form: **contact**
-6. Save
+---
 
-Without this, form submissions won't be sent anywhere!
+## Step 4: Verify Everything Works
 
-### 2. Configure Custom Domain
+### Test Checklist
 
-1. Go to: **Site Settings → Domain management**
-2. Click **"Add custom domain"**
-3. Enter: **vimerk.com**
-4. Follow DNS configuration instructions:
-   - If using Netlify DNS (recommended):
-     - Update your domain registrar nameservers to Netlify's
-   - If using external DNS:
-     - Add A record pointing to Netlify's load balancer
-     - Add CNAME for www subdomain
-
-5. SSL certificate will be auto-provisioned (usually takes <1 minute)
-
-### 3. Verify Deployment
-
-After deployment, test these items:
-
-- [ ] Site loads at your Netlify URL (e.g., `yoursite.netlify.app`)
+- [ ] Site loads at your custom domain (`https://vimerk.com`)
+- [ ] SSL certificate is active (https://)
 - [ ] Language toggle works (English ↔ Svenska)
 - [ ] Language preference persists after reload
 - [ ] All sections visible and styled correctly
 - [ ] Mobile responsive (test on phone or resize browser)
-- [ ] Contact form submits successfully
-- [ ] Form redirects to `/thanks.html` after submission
-- [ ] Thank you page displays in selected language
-- [ ] Form submission appears in: Site → Forms (in Netlify dashboard)
-- [ ] Email notification received at www@vimerk.com
+- [ ] **Contact form test:**
+  - [ ] Fill out form and submit
+  - [ ] Should redirect to `/thanks.html`
+  - [ ] Check email at www@vimerk.com for submission
+  - [ ] Verify spam folder if not in inbox
 - [ ] Favicon displays correctly
 - [ ] Logo appears in header
+- [ ] All project cards display properly
 
-### 4. Test Checklist
+### Quick Form Test
 
 ```bash
-# Test all pages return 200 OK
-curl -I https://your-domain.com/
-curl -I https://your-domain.com/thanks.html
-
-# Test static assets
-curl -I https://your-domain.com/static/css/styles.css
-curl -I https://your-domain.com/static/js/script.js
-curl -I https://your-domain.com/static/img/logo.svg
-curl -I https://your-domain.com/static/img/favicon.svg
+# Test form submission (replace with your domain)
+curl -X POST https://vimerk.com \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "access_key=YOUR_ACCESS_KEY&name=Test&email=test@example.com&topic=general&message=Test"
 ```
+
+---
+
+## Web3Forms Dashboard (Optional)
+
+### View Form Submissions
+
+1. Go to https://web3forms.com/dashboard
+2. Login with www@vimerk.com
+3. View all submissions, download CSV, etc.
+
+**Note:** Free tier is **unlimited submissions** - no upgrade needed!
+
+---
 
 ## Content Updates
 
-### Update English Text
+### Updating the Site
 
-1. Edit `index.html` - change the text directly in the HTML
-2. Edit `static/js/script.js` - update the `en` object in `translations`
+1. Make changes to files locally
+2. Commit and push to GitHub:
+   ```bash
+   git add .
+   git commit -m "Update: description of changes"
+   git push
+   ```
+3. Cloudflare auto-deploys within 30 seconds!
 
-### Update Swedish Text
+### Update Text Content
 
-1. Edit `static/js/script.js` - update the `sv` object in `translations`
+**English text:**
+- Edit `index.html` directly in HTML
+- Edit `static/js/script.js` - update `en` object
+
+**Swedish text:**
+- Edit `static/js/script.js` - update `sv` object
 
 ### Add New Translatable Content
 
-1. Add `data-i18n="unique.key"` to your HTML element
-2. Add the key to both `en` and `sv` objects in `script.js`:
+1. Add `data-i18n="unique.key"` to HTML element
+2. Add translations to `script.js`:
    ```javascript
    en: {
      'unique.key': 'English text',
@@ -139,25 +194,46 @@ curl -I https://your-domain.com/static/img/favicon.svg
    }
    ```
 
+---
+
 ## Troubleshooting
 
 ### Form Not Working
 
-**Problem:** Form submits but doesn't appear in Netlify dashboard
+**Problem:** Form submits but no email received
 
 **Solutions:**
-- Verify `data-netlify="true"` attribute exists on `<form>` tag
-- Verify hidden `form-name` input exists
-- Redeploy the site (Netlify parses forms during build)
-- Check Netlify deploy log for form detection message
+1. Verify access key in `index.html` is correct
+2. Check spam folder at www@vimerk.com
+3. Verify email address at https://web3forms.com
+4. Check Web3Forms dashboard for submission
+5. Test with a different email address
 
-**Problem:** Form notifications not received
+**Problem:** Form doesn't redirect to thank you page
 
 **Solutions:**
-- Go to Site Settings → Forms → Form notifications
-- Verify www@vimerk.com is configured
-- Check spam folder
-- Submit a test form and check Netlify dashboard under Forms
+1. Update redirect URL in `index.html` line 217 to match your domain:
+   ```html
+   <input type="hidden" name="redirect" value="https://vimerk.com/thanks.html">
+   ```
+2. Ensure `thanks.html` exists and is deployed
+
+### Deployment Issues
+
+**Problem:** Build fails on Cloudflare
+
+**Solutions:**
+- Build command should be empty (it's a static site)
+- Output directory should be `/` (root)
+- Check deploy logs in Cloudflare dashboard
+
+**Problem:** Custom domain not working
+
+**Solutions:**
+- Wait 5-10 minutes for DNS propagation
+- Verify DNS records in Cloudflare dashboard
+- Clear browser cache
+- Try incognito/private browsing mode
 
 ### Language Toggle Not Working
 
@@ -165,9 +241,9 @@ curl -I https://your-domain.com/static/img/favicon.svg
 
 **Solutions:**
 - Check browser console for JavaScript errors
-- Verify `static/js/script.js` is loading (check Network tab)
+- Verify `static/js/script.js` is loading
 - Clear browser cache and localStorage
-- Verify translations dictionary is complete
+- Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
 
 ### Styling Issues
 
@@ -179,92 +255,168 @@ curl -I https://your-domain.com/static/img/favicon.svg
   https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css
   ```
 - Verify `static/css/styles.css` is loading
-- Clear browser cache
 - Check browser console for 404 errors
+- Update CSP in `_headers` if blocking resources
 
-### SEO & Meta Tags Not Updating
+---
 
-**Problem:** Language changes but meta tags stay in English
+## Performance & Monitoring
 
-**Solutions:**
-- Meta tags update is handled by JavaScript
-- Verify `data-i18n-content` attributes exist
-- Check browser console for errors
-- Note: Search engines may still index English as primary (use hreflang tags for proper multilingual SEO if needed later)
+### Cloudflare Pages Analytics
 
-## Performance Optimization (Optional)
+**Free tier includes:**
+- Unlimited bandwidth
+- Unlimited requests
+- Web Analytics (privacy-friendly, no cookies)
 
-Current setup is already optimized, but for future improvements:
+**Enable Web Analytics:**
+1. Go to Workers & Pages → Your site
+2. Click **"Analytics"** tab
+3. Enable **"Web Analytics"**
+4. No code changes needed!
 
-1. **Add hreflang tags** for proper multilingual SEO
-2. **Create separate HTML files** (`index.html` and `sv/index.html`) for better SEO
-3. **Add service worker** for offline functionality
-4. **Optimize images** (current SVGs are already optimized)
-5. **Add preconnect** to Pico.css CDN:
-   ```html
-   <link rel="preconnect" href="https://cdn.jsdelivr.net">
-   ```
+### Cache Behavior
+
+Caching is configured in `_headers`:
+- **Static assets** (`/static/*`, `*.svg`): 1 year cache
+- **HTML files**: 1 hour cache
+- Cloudflare CDN caches globally automatically
+
+### Force Cache Clear
+
+If you need to purge cache:
+1. Cloudflare Dashboard → Your site
+2. Click **"Deployments"**
+3. Click **"..."** on latest deployment
+4. Click **"Retry deployment"**
+
+---
 
 ## Security
 
-Current security headers are configured in `netlify.toml`:
-- X-Frame-Options
-- X-Content-Type-Options
-- X-XSS-Protection
-- Content-Security-Policy
-- Permissions-Policy
+### Security Headers
 
-To update CSP or other headers, edit `netlify.toml` and redeploy.
+Configured in `_headers`:
+- `X-Frame-Options: SAMEORIGIN`
+- `X-Content-Type-Options: nosniff`
+- `X-XSS-Protection: 1; mode=block`
+- `Content-Security-Policy` (strict)
+- `Permissions-Policy` (restrictive)
 
-## Analytics (Future)
+### Update CSP
 
-Currently no analytics per requirements. To add in future:
+If you need to allow additional domains:
+1. Edit `_headers` file
+2. Update `Content-Security-Policy` line
+3. Commit and push
 
-1. **Privacy-friendly options:**
-   - Plausible Analytics
-   - Fathom Analytics
-   - Simple Analytics
+Example - allow Google Fonts:
+```
+Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net fonts.googleapis.com; font-src 'self' fonts.gstatic.com;
+```
 
-2. **Implementation:**
-   - Add script tag before `</body>`
-   - Update privacy notice in footer
-   - Update CSP in `netlify.toml` to allow analytics domain
+---
 
-## Monitoring
+## Cost Breakdown
 
-Netlify provides built-in monitoring:
-- **Forms:** Dashboard → Forms (see all submissions)
-- **Analytics:** Dashboard → Analytics (bandwidth, visits if enabled)
-- **Functions:** N/A (no serverless functions in this project)
-- **Deploy logs:** Dashboard → Deploys (see build/deploy history)
+### Current Setup (FREE)
 
-## Backup & Version Control
+| Service | Plan | Cost | Usage Limits |
+|---------|------|------|--------------|
+| **Cloudflare Pages** | Free | $0 | Unlimited bandwidth, unlimited requests, 500 builds/month |
+| **Web3Forms** | Free | $0 | Unlimited submissions |
+| **Cloudflare DNS** | Free | $0 | Included with Pages |
+| **SSL Certificate** | Free | $0 | Auto-provisioned |
+| **Web Analytics** | Free | $0 | Privacy-friendly, cookieless |
+| **Total** | | **$0/month** | |
 
-**Recommended:** Use Git for version control
+**Commercial use:** ✅ Allowed on free tier
 
+### What if you exceed limits?
+
+**Cloudflare Pages Free Tier:**
+- 500 builds/month (you'll use ~30-50 for a commercial site)
+- If exceeded: $5/month for unlimited builds
+
+**Web3Forms Free Tier:**
+- Truly unlimited (no submission cap)
+- No paid tier needed
+
+---
+
+## Rollback / Version Control
+
+### Rollback to Previous Version
+
+**Via Cloudflare Dashboard:**
+1. Go to **Deployments**
+2. Find previous working deployment
+3. Click **"..."** → **"Rollback to this deployment"**
+4. Instant rollback!
+
+**Via Git:**
 ```bash
-# After making changes
-git add .
-git commit -m "Update: description of changes"
+# View commit history
+git log --oneline
+
+# Rollback to specific commit
+git revert <commit-hash>
 git push
 
-# Netlify will auto-deploy if Git integration is set up
+# Cloudflare auto-deploys
 ```
 
-**Manual backup:** Download production deployment
+---
+
+## Adding Features (Future)
+
+### Add Newsletter Signup
+- **Recommended:** Buttondown (free tier: 100 subscribers)
+- **Alternative:** EmailOctopus, Mailchimp
+
+### Add Analytics (Privacy-Friendly)
+- **Built-in:** Cloudflare Web Analytics (already available!)
+- **Alternative:** Plausible, Fathom, Simple Analytics
+
+### Add Blog/CMS
+- **Cloudflare Pages supports:**
+  - Hugo (static site generator)
+  - Next.js (static export)
+  - Astro (static builds)
+- Update build settings in Cloudflare dashboard
+
+---
+
+## Support Resources
+
+- **Cloudflare Pages Docs:** https://developers.cloudflare.com/pages
+- **Web3Forms Docs:** https://docs.web3forms.com
+- **Cloudflare Community:** https://community.cloudflare.com
+- **Pico.css Docs:** https://picocss.com/docs
+
+---
+
+## Quick Reference Commands
 
 ```bash
-netlify sites:list
-netlify sites:download --site-id=<your-site-id>
+# View deployment URL
+# In Cloudflare dashboard or:
+wrangler pages deployment list --project-name=vimerk
+
+# Deploy manually (if needed)
+wrangler pages deploy . --project-name=vimerk
+
+# View build logs
+# In Cloudflare dashboard: Workers & Pages → Your site → Deployments → View logs
+
+# Test site locally
+python3 -m http.server 8000
+# Visit: http://localhost:8000
 ```
 
-## Support
-
-- **Netlify Docs:** https://docs.netlify.com
-- **Netlify Support:** https://support.netlify.com
-- **Pico.css Docs:** https://picocss.com/docs
+---
 
 ## Contact
 
-For questions about this implementation:
+For questions about this setup:
 **www@vimerk.com**
