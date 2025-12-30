@@ -33,7 +33,7 @@ const translations = {
 
     'projects.talaria.desc': 'Quantitative trading system generating signals and predictions for swing trading strategies.',
 
-    'projects.tinyfutures.desc': 'A playful photo tool for imagining "older" versions of personal family photos.',
+    'projects.tinyfutures.desc': 'Playful tool to visualize how babies and young children might look as adults.',
 
     'projects.futhark.desc': 'Nordic and Viking-inspired cultural initiative.',
 
@@ -120,7 +120,7 @@ const translations = {
 
     'projects.talaria.desc': 'Kvantitativt handelssystem som genererar signaler och prediktioner för swing trading-strategier.',
 
-    'projects.tinyfutures.desc': 'Ett lekfullt fotoverktyg för att föreställa sig "äldre" versioner av personliga familjefoton.',
+    'projects.tinyfutures.desc': 'Lekfullt verktyg för att visualisera hur bebisar och småbarn kan se ut som vuxna.',
 
     'projects.futhark.desc': 'Nordisk och vikinginspirerat kulturinitiativ.',
 
