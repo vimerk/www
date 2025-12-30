@@ -23,7 +23,6 @@ const translations = {
     'hero.subheadline': 'APIs, applied ML tools, and pragmatic AI services.',
     'hero.cta1': 'Explore projects',
     'hero.cta2': 'Follow updates',
-    'hero.note': 'This is a minimal public presence. Individual project pages will be added progressively.',
 
     // Projects
     'projects.title': 'Projects',
@@ -115,7 +114,6 @@ const translations = {
     'hero.subheadline': 'API:er, tillämpade ML-verktyg och pragmatiska AI-tjänster.',
     'hero.cta1': 'Utforska projekt',
     'hero.cta2': 'Följ uppdateringar',
-    'hero.note': 'Detta är en minimal publik närvaro. Individuella projektsidor kommer att läggas till progressivt.',
 
     // Projects
     'projects.title': 'Projekt',
