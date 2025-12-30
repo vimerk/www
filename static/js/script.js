@@ -29,7 +29,7 @@ const translations = {
     'projects.badge.tba': 'TBA',
     'projects.badge.planned': 'Planned',
 
-    'projects.nomacore.desc': 'A pragmatic toolkit for digital infrastructure and workflow automation.',
+    'projects.nomacore.desc': 'Commercial intelligence API deriving demographic insights from customer names and addresses.',
 
     'projects.talaria.desc': 'Market data and analysis tools for informed decision-making.',
     'projects.talaria.disclaimer': '* Informational only; not financial advice.',
@@ -117,7 +117,7 @@ const translations = {
     'projects.badge.tba': 'Kommer',
     'projects.badge.planned': 'Planerat',
 
-    'projects.nomacore.desc': 'Ett pragmatiskt verktyg för digital infrastruktur och arbetsflödesautomation.',
+    'projects.nomacore.desc': 'Kommersiell intelligens-API som härleder demografiska insikter från kundnamn och adresser.',
 
     'projects.talaria.desc': 'Marknadsdata och analysverktyg för välgrundade beslut.',
     'projects.talaria.disclaimer': '* Endast informativt; inte finansiell rådgivning.',
