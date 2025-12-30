@@ -1,0 +1,535 @@
+/* ============================================
+   Vimerk Custom Styles
+   Built on Pico.css framework
+   ============================================ */
+
+/* CSS Variables - Dark Theme with Gradient Accents */
+:root {
+  /* Color Palette */
+  --vimerk-dark: #0f172a;
+  --vimerk-darker: #020617;
+  --vimerk-accent-start: #667eea;
+  --vimerk-accent-end: #764ba2;
+  --vimerk-text-primary: #f8fafc;
+  --vimerk-text-secondary: #cbd5e1;
+  --vimerk-text-muted: #94a3b8;
+  --vimerk-border: #1e293b;
+
+  /* Override Pico defaults for dark theme */
+  --pico-background-color: var(--vimerk-dark);
+  --pico-color: var(--vimerk-text-primary);
+  --pico-h1-color: var(--vimerk-text-primary);
+  --pico-h2-color: var(--vimerk-text-primary);
+  --pico-h3-color: var(--vimerk-text-primary);
+  --pico-muted-color: var(--vimerk-text-muted);
+  --pico-primary: var(--vimerk-accent-start);
+  --pico-primary-hover: var(--vimerk-accent-end);
+  --pico-card-background-color: rgba(30, 41, 59, 0.5);
+  --pico-card-border-color: var(--vimerk-border);
+}
+
+/* System Font Stack */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+               "Segoe UI Emoji", "Segoe UI Symbol";
+  background: linear-gradient(135deg, var(--vimerk-darker) 0%, var(--vimerk-dark) 100%);
+  min-height: 100vh;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--vimerk-accent-start);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============================================
+   Header & Navigation
+   ============================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--vimerk-border);
+  padding: 0.75rem 0;
+}
+
+.site-header nav {
+  padding: 0;
+}
+
+.site-header nav ul {
+  margin: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--vimerk-text-primary);
+  font-size: 1.25rem;
+}
+
+.brand img {
+  filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.4));
+}
+
+.brand:hover {
+  color: var(--vimerk-accent-start);
+}
+
+/* Language Dropdown */
+.dropdown summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--vimerk-border);
+  transition: all 0.2s ease;
+}
+
+.dropdown summary:hover {
+  border-color: var(--vimerk-accent-start);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.dropdown summary::after {
+  content: " ▾";
+  margin-left: 0.5rem;
+}
+
+.dropdown ul {
+  margin-top: 0.5rem;
+  min-width: 150px;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--vimerk-accent-start), var(--vimerk-accent-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero hgroup p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: var(--vimerk-text-secondary);
+  margin-top: 1rem;
+}
+
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.cta-group a[role="button"] {
+  min-width: 180px;
+}
+
+.minimal-presence-note {
+  margin-top: 2rem;
+  color: var(--vimerk-text-muted);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   Projects Section
+   ============================================ */
+
+#projects {
+  padding: 4rem 0;
+}
+
+#projects hgroup {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--pico-card-background-color);
+  border: 1px solid var(--vimerk-border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vimerk-accent-start), var(--vimerk-accent-end));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--vimerk-accent-start);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 1rem;
+  background: rgba(102, 126, 234, 0.2);
+  color: var(--vimerk-accent-start);
+  border: 1px solid var(--vimerk-accent-start);
+  white-space: nowrap;
+}
+
+.project-card p {
+  color: var(--vimerk-text-secondary);
+  margin: 0;
+}
+
+.project-card footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vimerk-border);
+}
+
+.disclaimer {
+  color: var(--vimerk-text-muted);
+  font-style: italic;
+  display: block;
+}
+
+/* ============================================
+   Principles Section
+   ============================================ */
+
+#principles {
+  padding: 4rem 0;
+  background: rgba(2, 6, 23, 0.5);
+  margin: 2rem 0;
+  border-radius: 1rem;
+}
+
+#principles hgroup {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.principles-grid article {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.principles-grid h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: var(--vimerk-accent-start);
+}
+
+.principles-grid p {
+  color: var(--vimerk-text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ============================================
+   Follow Updates Section
+   ============================================ */
+
+#updates {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+#updates hgroup {
+  margin-bottom: 2rem;
+}
+
+.updates-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.updates-content p {
+  color: var(--vimerk-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   Contact Section
+   ============================================ */
+
+#contact {
+  padding: 4rem 0;
+}
+
+#contact hgroup {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(30, 41, 59, 0.3);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--vimerk-border);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.required {
+  color: var(--vimerk-accent-start);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--vimerk-border);
+  color: var(--vimerk-text-primary);
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--vimerk-accent-start);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, var(--vimerk-accent-start), var(--vimerk-accent-end));
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.email-alternative {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--vimerk-text-secondary);
+}
+
+.email-alternative a {
+  color: var(--vimerk-accent-start);
+  text-decoration: none;
+}
+
+.email-alternative a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   Thanks Page
+   ============================================ */
+
+.thanks-section {
+  padding: 4rem 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.thanks-content hgroup {
+  margin-bottom: 2rem;
+}
+
+.thanks-content h1 {
+  background: linear-gradient(135deg, var(--vimerk-accent-start), var(--vimerk-accent-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.thanks-content p {
+  color: var(--vimerk-text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--vimerk-border);
+  text-align: center;
+  color: var(--vimerk-text-muted);
+}
+
+.site-footer p {
+  margin: 0.5rem 0;
+}
+
+.site-footer a {
+  color: var(--vimerk-accent-start);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .cta-group {
+    flex-direction: column;
+  }
+
+  .cta-group a[role="button"] {
+    width: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Smooth Scrolling
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll padding to account for sticky header */
+:target {
+  scroll-margin-top: 100px;
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+
+/* Focus visible styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--vimerk-accent-start);
+  outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

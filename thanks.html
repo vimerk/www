@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="thanks.meta.title">Thank you - Vimerk</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg">
+
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <!-- Header (minimal) -->
+  <header class="site-header">
+    <nav class="container">
+      <ul>
+        <li>
+          <a href="/" class="brand">
+            <img src="/static/img/logo.svg" alt="Vimerk logo" width="40" height="40">
+            <strong>Vimerk</strong>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <details class="dropdown">
+            <summary id="lang-toggle">
+              <span id="current-lang">English</span>
+            </summary>
+            <ul>
+              <li><a href="#" data-lang="en">English</a></li>
+              <li><a href="#" data-lang="sv">Svenska</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="thanks-section">
+      <article class="thanks-content">
+        <hgroup>
+          <h1 data-i18n="thanks.title">Thank you for reaching out</h1>
+          <p data-i18n="thanks.subtitle">Your message has been received.</p>
+        </hgroup>
+
+        <p data-i18n="thanks.message">
+          We'll review your message and respond as soon as possible. If your inquiry is time-sensitive, feel free to email directly at <a href="mailto:www@vimerk.com">www@vimerk.com</a>.
+        </p>
+
+        <a href="/" role="button" data-i18n="thanks.back">Return to homepage</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <small>&copy; 2025 Vimerk. <a href="mailto:www@vimerk.com">www@vimerk.com</a></small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/static/js/script.js"></script>
+</body>
+</html>

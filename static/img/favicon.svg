@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="favGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Simplified hexagon -->
+  <path d="M 16 4 L 28 11 L 28 21 L 16 28 L 4 21 L 4 11 Z"
+        fill="url(#favGradient)"/>
+
+  <!-- V mark in contrasting color -->
+  <path d="M 11 12 L 16 20 L 21 12"
+        stroke="#0f172a"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"/>
+</svg>
