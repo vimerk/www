@@ -61,9 +61,7 @@ const translations = {
 
     // Follow Updates
     'updates.title': 'Follow Updates',
-    'updates.subtitle': 'Stay informed about new projects and releases.',
-    'updates.social.none': 'No social links published yet. We\'ll announce social media presence when ready.',
-    'updates.notify': 'Notify me when updates are published',
+    'updates.bluesky.label': 'Follow us on Bluesky for updates:',
 
     // Contact
     'contact.title': 'Contact',
@@ -151,9 +149,7 @@ const translations = {
 
     // Follow Updates
     'updates.title': 'Följ uppdateringar',
-    'updates.subtitle': 'Håll dig informerad om nya projekt och lanseringar.',
-    'updates.social.none': 'Inga sociala länkar publicerade ännu. Vi meddelar när sociala medier-närvaro är klar.',
-    'updates.notify': 'Meddela mig när uppdateringar publiceras',
+    'updates.bluesky.label': 'Följ oss på Bluesky för uppdateringar:',
 
     // Contact
     'contact.title': 'Kontakt',
