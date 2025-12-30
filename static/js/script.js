@@ -26,7 +26,6 @@ const translations = {
 
     // Projects
     'projects.title': 'Projects',
-    'projects.subtitle': 'Portfolio of digital products in development. All are designed for low-maintenance operation and clear scope boundaries.',
     'projects.badge.tba': 'TBA',
     'projects.badge.planned': 'Planned',
 
@@ -117,7 +116,6 @@ const translations = {
 
     // Projects
     'projects.title': 'Projekt',
-    'projects.subtitle': 'Portfölj av digitala produkter under utveckling. Alla är utformade för lågunderhållsdrift och tydliga gränser.',
     'projects.badge.tba': 'Kommer',
     'projects.badge.planned': 'Planerat',
 
