@@ -8,7 +8,7 @@ const translations = {
   en: {
     // Meta
     'meta.title': 'Vimerk - Small, low-maintenance digital products',
-    'meta.description': 'Vimerk builds small, low-maintenance digital products: APIs, applied ML tools, and pragmatic AI services. Apps, websites, and social media content tooling are also planned.',
+    'meta.description': 'Vimerk builds small, low-maintenance digital products. APIs, applied ML tools, and pragmatic AI services. Apps, websites, and social media content tooling are also planned.',
 
     // Accessibility
     'accessibility.skip': 'Skip to main content',
@@ -19,8 +19,8 @@ const translations = {
     'nav.contact': 'Contact',
 
     // Hero
-    'hero.headline': 'Vimerk builds small, low-maintenance digital products: APIs, applied ML tools, and pragmatic AI services.',
-    'hero.subheadline': 'Apps, websites, and social media content tooling are also planned.',
+    'hero.headline': 'Vimerk builds small, low-maintenance digital products.',
+    'hero.subheadline': 'APIs, applied ML tools, and pragmatic AI services. Apps, websites, and social media content tooling are also planned.',
     'hero.cta1': 'Explore projects',
     'hero.cta2': 'Follow updates',
     'hero.note': 'This is a minimal public presence. Individual project pages will be added progressively.',
@@ -100,7 +100,7 @@ const translations = {
   sv: {
     // Meta
     'meta.title': 'Vimerk - Små, lättunderhållna digitala produkter',
-    'meta.description': 'Vimerk bygger små, lättunderhållna digitala produkter: API:er, tillämpad ML-verktyg och pragmatiska AI-tjänster. Appar, webbplatser och verktyg för sociala medier planeras också.',
+    'meta.description': 'Vimerk bygger små, lättunderhållna digitala produkter. API:er, tillämpad ML-verktyg och pragmatiska AI-tjänster. Appar, webbplatser och verktyg för sociala medier planeras också.',
 
     // Accessibility
     'accessibility.skip': 'Hoppa till huvudinnehåll',
@@ -111,8 +111,8 @@ const translations = {
     'nav.contact': 'Kontakt',
 
     // Hero
-    'hero.headline': 'Vimerk bygger små, lättunderhållna digitala produkter: API:er, tillämpad ML-verktyg och pragmatiska AI-tjänster.',
-    'hero.subheadline': 'Appar, webbplatser och verktyg för sociala medier planeras också.',
+    'hero.headline': 'Vimerk bygger små, lättunderhållna digitala produkter.',
+    'hero.subheadline': 'API:er, tillämpad ML-verktyg och pragmatiska AI-tjänster. Appar, webbplatser och verktyg för sociala medier planeras också.',
     'hero.cta1': 'Utforska projekt',
     'hero.cta2': 'Följ uppdateringar',
     'hero.note': 'Detta är en minimal publik närvaro. Individuella projektsidor kommer att läggas till progressivt.',
