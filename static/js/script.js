@@ -31,8 +31,7 @@ const translations = {
 
     'projects.nomacore.desc': 'Commercial intelligence API deriving demographic insights from customer names and addresses.',
 
-    'projects.talaria.desc': 'Market data and analysis tools for informed decision-making.',
-    'projects.talaria.disclaimer': '* Informational only; not financial advice.',
+    'projects.talaria.desc': 'Quantitative trading system generating signals and predictions for swing trading strategies.',
 
     'projects.tinyfutures.desc': 'A playful photo tool for imagining "older" versions of personal family photos.',
 
@@ -119,8 +118,7 @@ const translations = {
 
     'projects.nomacore.desc': 'Kommersiell intelligens-API som härleder demografiska insikter från kundnamn och adresser.',
 
-    'projects.talaria.desc': 'Marknadsdata och analysverktyg för välgrundade beslut.',
-    'projects.talaria.disclaimer': '* Endast informativt; inte finansiell rådgivning.',
+    'projects.talaria.desc': 'Kvantitativt handelssystem som genererar signaler och prediktioner för swing trading-strategier.',
 
     'projects.tinyfutures.desc': 'Ett lekfullt fotoverktyg för att föreställa sig "äldre" versioner av personliga familjefoton.',
 
