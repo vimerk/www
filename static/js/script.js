@@ -35,10 +35,6 @@ const translations = {
 
     'projects.tinyfutures.desc': 'Playful tool to visualize how babies and young children might look as adults.',
 
-    'projects.futhark.desc': 'Nordic and Viking-inspired cultural initiative.',
-
-    'projects.antares.desc': 'Astrology tools and resources for personal exploration.',
-
     'projects.more.title': 'More Planned',
     'projects.more.desc': 'Additional apps, websites, and social media content generation tools with productized, low-support models.',
 
@@ -121,10 +117,6 @@ const translations = {
     'projects.talaria.desc': 'Kvantitativt handelssystem som genererar signaler och prediktioner för swing trading-strategier.',
 
     'projects.tinyfutures.desc': 'Lekfullt verktyg för att visualisera hur bebisar och småbarn kan se ut som vuxna.',
-
-    'projects.futhark.desc': 'Nordisk och vikinginspirerat kulturinitiativ.',
-
-    'projects.antares.desc': 'Astrologiverktyg och resurser för personlig utforskning.',
 
     'projects.more.title': 'Fler planerade',
     'projects.more.desc': 'Ytterligare appar, webbplatser och verktyg för generering av innehåll för sociala medier med produktifierade, lågsupport-modeller.',
