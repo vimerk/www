@@ -37,6 +37,20 @@ body {
   min-height: 100vh;
 }
 
+/* Remove Pico.css default top border/indicator */
+body::before,
+html::before {
+  display: none !important;
+}
+
+body {
+  border-top: none !important;
+}
+
+html {
+  border-top: none !important;
+}
+
 /* Skip Link for Accessibility */
 .skip-link {
   position: absolute;
