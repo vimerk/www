@@ -9,17 +9,14 @@
   <!-- Outer hexagon -->
   <path d="M 100 20 L 170 60 L 170 140 L 100 180 L 30 140 L 30 60 Z"
         stroke="url(#vimerGradient)"
-        stroke-width="3"
+        stroke-width="8"
         fill="none"/>
 
   <!-- Inner angular V mark -->
   <path d="M 70 60 L 100 120 L 130 60"
         stroke="url(#vimerGradient)"
-        stroke-width="6"
+        stroke-width="12"
         stroke-linecap="round"
         stroke-linejoin="round"
         fill="none"/>
-
-  <!-- Geometric accent dot -->
-  <circle cx="100" cy="135" r="5" fill="url(#vimerGradient)"/>
 </svg>

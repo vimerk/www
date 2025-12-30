@@ -13,7 +13,7 @@
   <!-- V mark in contrasting color -->
   <path d="M 11 12 L 16 20 L 21 12"
         stroke="#0f172a"
-        stroke-width="2.5"
+        stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
         fill="none"/>
