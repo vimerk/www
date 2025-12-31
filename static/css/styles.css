@@ -227,11 +227,14 @@ section {
 /* Language Switcher */
 .lang-switcher {
   display: flex;
-  gap: 0.75rem;
+  gap: 1.25rem;
   align-items: center;
 }
 
 .lang-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   font-family: monospace;
   font-size: 0.875rem;
   color: #64748b;
@@ -1027,10 +1030,11 @@ button[type="submit"]:hover::before {
   }
 
   .lang-switcher {
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .lang-option {
+    gap: 0.2rem;
     font-size: 0.75rem;
   }
 }
