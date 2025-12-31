@@ -373,7 +373,7 @@ main {
 .about::before {
   content: "002";
   position: absolute;
-  top: 3.5rem;
+  top: 1.5rem;
   left: 2rem;
   font-family: monospace;
   font-size: 0.75rem;
