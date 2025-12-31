@@ -93,7 +93,6 @@ const translations = {
 
     // Footer
     'footer.tagline': 'Independent engineering practice. Uppsala, Sweden. Built to last.',
-    'footer.manifesto': 'Company Manifesto',
 
     // Thanks Page
     'thanks.meta.title': 'Thank you - Vimerk',
@@ -191,7 +190,6 @@ const translations = {
 
     // Footer
     'footer.tagline': 'Oberoende ingenjörspraxis. Uppsala, Sverige. Byggd för att bestå.',
-    'footer.manifesto': 'Företagsmanifest',
 
     // Thanks Page
     'thanks.meta.title': 'Tack - Vimerk',
