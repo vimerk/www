@@ -716,7 +716,7 @@ label {
   display: block;
 }
 
-label span {
+label > span:first-child {
   display: block;
   font-family: monospace;
   font-size: 0.875rem;
@@ -726,7 +726,8 @@ label span {
   margin-bottom: 0.5rem;
 }
 
-.required {
+label span.required {
+  display: inline;
   color: #667eea;
 }
 
