@@ -227,7 +227,7 @@ section {
 /* Language Switcher */
 .lang-switcher {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -1030,7 +1030,7 @@ button[type="submit"]:hover::before {
   }
 
   .lang-switcher {
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
   .lang-option {
