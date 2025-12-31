@@ -89,8 +89,6 @@ const translations = {
     'contact.form.message.placeholder': 'Your message...',
     'contact.form.submit': 'Send message',
 
-    'contact.alternative': 'Prefer email? You can also write directly to ',
-
     // Footer
     'footer.tagline': 'Independent engineering practice. Uppsala, Sweden. Built to last.',
 
@@ -185,8 +183,6 @@ const translations = {
     'contact.form.message': 'Meddelande',
     'contact.form.message.placeholder': 'Ditt meddelande...',
     'contact.form.submit': 'Skicka meddelande',
-
-    'contact.alternative': 'Föredrar e-post? Du kan också skriva direkt till ',
 
     // Footer
     'footer.tagline': 'Oberoende ingenjörspraxis. Uppsala, Sverige. Byggd för att bestå.',
