@@ -93,7 +93,6 @@ const translations = {
 
     // Footer
     'footer.tagline': 'Independent engineering practice. Uppsala, Sweden. Built to last.',
-    'footer.analytics': 'Static site. No analytics by default. Project pages will be added progressively.',
     'footer.manifesto': 'Company Manifesto',
 
     // Thanks Page
@@ -192,7 +191,6 @@ const translations = {
 
     // Footer
     'footer.tagline': 'Oberoende ingenjörspraxis. Uppsala, Sverige. Byggd för att bestå.',
-    'footer.analytics': 'Statisk webbplats. Ingen analys som standard. Projektsidor kommer att läggas till progressivt.',
     'footer.manifesto': 'Företagsmanifest',
 
     // Thanks Page
