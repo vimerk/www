@@ -281,14 +281,12 @@ main {
 .hero::before {
   content: "001";
   position: absolute;
-  top: 6rem;
+  top: 4rem;
   left: 2rem;
   font-family: monospace;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.15em;
-  text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  font-size: 0.75rem;
+  color: rgba(102, 126, 234, 0.4);
+  letter-spacing: 0.1em;
 }
 
 .hero h1 {
@@ -375,14 +373,12 @@ main {
 .about::before {
   content: "002";
   position: absolute;
-  top: 5.5rem;
+  top: 3.5rem;
   left: 2rem;
   font-family: monospace;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.15em;
-  text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  font-size: 0.75rem;
+  color: rgba(102, 126, 234, 0.4);
+  letter-spacing: 0.1em;
 }
 
 .about article {
@@ -428,14 +424,12 @@ main {
 #projects::before {
   content: "003";
   position: absolute;
-  top: 5.5rem;
+  top: 3.5rem;
   left: 2rem;
   font-family: monospace;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.15em;
-  text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  font-size: 0.75rem;
+  color: rgba(102, 126, 234, 0.4);
+  letter-spacing: 0.1em;
 }
 
 #projects h2 {
@@ -555,14 +549,12 @@ main {
 #principles::before {
   content: "004";
   position: absolute;
-  top: 5.5rem;
+  top: 3.5rem;
   left: 2rem;
   font-family: monospace;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.15em;
-  text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  font-size: 0.75rem;
+  color: rgba(102, 126, 234, 0.4);
+  letter-spacing: 0.1em;
 }
 
 #principles h2 {
@@ -665,14 +657,12 @@ main {
 #updates::before {
   content: "005";
   position: absolute;
-  top: 5.5rem;
+  top: 3.5rem;
   left: 2rem;
   font-family: monospace;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.15em;
-  text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  font-size: 0.75rem;
+  color: rgba(102, 126, 234, 0.4);
+  letter-spacing: 0.1em;
 }
 
 #updates h2 {
@@ -736,14 +726,12 @@ main {
 #contact::before {
   content: "006";
   position: absolute;
-  top: 5.5rem;
+  top: 3.5rem;
   left: 2rem;
   font-family: monospace;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.15em;
-  text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  font-size: 0.75rem;
+  color: rgba(102, 126, 234, 0.4);
+  letter-spacing: 0.1em;
 }
 
 #contact hgroup {
@@ -1051,19 +1039,6 @@ button[type="submit"]:hover::before {
   #updates::before,
   #contact::before {
     left: 1.5rem;
-    font-size: 0.75rem;
-  }
-
-  .hero::before {
-    top: 4rem;
-  }
-
-  .about::before,
-  #projects::before,
-  #principles::before,
-  #updates::before,
-  #contact::before {
-    top: 3.5rem;
   }
 
   .hero {
