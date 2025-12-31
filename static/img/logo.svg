@@ -17,7 +17,7 @@
   </g>
 
   <!-- V letterform -->
-  <path d="M 85 50 L 100 110 L 115 50 L 135 50 L 110 130 L 90 130 L 65 50 Z"
+  <path d="M 85 50 L 100 130 L 115 50 L 135 50 L 110 150 L 90 150 L 65 50 Z"
         fill="url(#vGradient)"/>
 
   <!-- Right bracket ] -->
