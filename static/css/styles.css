@@ -227,7 +227,7 @@ section {
 /* Language Switcher */
 .lang-switcher {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
 }
 
