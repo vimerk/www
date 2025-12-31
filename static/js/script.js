@@ -90,7 +90,7 @@ const translations = {
     'contact.form.submit': 'Send message',
 
     // Footer
-    'footer.tagline': 'Independent engineering practice. Uppsala, Sweden. Built to last.',
+    'footer.tagline': 'Independent engineering practice. Built to last. Uppsala, Sweden.',
 
     // Thanks Page
     'thanks.meta.title': 'Thank you - Vimerk',
@@ -185,7 +185,7 @@ const translations = {
     'contact.form.submit': 'Skicka meddelande',
 
     // Footer
-    'footer.tagline': 'Oberoende ingenjörspraxis. Uppsala, Sverige. Byggd för att bestå.',
+    'footer.tagline': 'Oberoende ingenjörspraxis. Byggd för att bestå. Uppsala, Sverige.',
 
     // Thanks Page
     'thanks.meta.title': 'Tack - Vimerk',
