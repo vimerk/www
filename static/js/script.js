@@ -25,9 +25,9 @@ const translations = {
     'hero.cta2': 'Follow updates',
 
     // About
-    'about.intro': 'Vimerk is a solo digital products company based in Uppsala, Sweden. We build small, precise, and durable technical products: APIs, applied machine-learning tools, and AI-assisted services that solve real problems with minimal operational overhead.',
-    'about.positioning': 'This is not a startup chasing scale for its own sake. It's a long-term, independent engineering practice—productized.',
-    'about.belief': 'Most digital products fail not because the ideas are bad, but because they are overengineered, overpromised, and overdependent on complexity or constant intervention. Vimerk exists to do the opposite.',
+    'about.intro': 'Vimerk is a solo digital products company based in Uppsala, Sweden. We build small, precise, and durable technical products: APIs, applied machine-learning tools, and AI/LLM-assisted services that solve real problems with minimal operational overhead.',
+    'about.positioning': 'This is not a startup chasing scale for its own sake. It is a long-term, independent engineering practice, productized.',
+    'about.belief': 'We believe that many digital products and companies, especially solo or small ones, fail not because the ideas are bad, but because they are overengineered, overpromised, and overdependent on complexity or constant intervention. Vimerk exists to do the opposite.',
 
     // Projects
     'projects.title': 'Projects',
@@ -122,9 +122,9 @@ const translations = {
     'hero.cta2': 'Följ uppdateringar',
 
     // About
-    'about.intro': 'Vimerk är ett solo digitalt produktföretag baserat i Uppsala, Sverige. Vi bygger små, precisa och varaktiga tekniska produkter: API:er, tillämpade maskininlärningsverktyg och AI-assisterade tjänster som löser verkliga problem med minimalt driftskostnader.',
-    'about.positioning': 'Detta är inte en startup som jagar tillväxt för sin egen skull. Det är en långsiktig, oberoende ingenjörspraxis—produktifierad.',
-    'about.belief': 'De flesta digitala produkter misslyckas inte för att idéerna är dåliga, utan för att de är överkomplicerade, överlovade och beroende av komplexitet eller ständig intervention. Vimerk finns för att göra tvärtom.',
+    'about.intro': 'Vimerk är ett solo digitalt produktföretag baserat i Uppsala, Sverige. Vi bygger små, precisa och varaktiga tekniska produkter: API:er, tillämpade maskininlärningsverktyg och AI/LLM-assisterade tjänster som löser verkliga problem med minimalt driftskostnader.',
+    'about.positioning': 'Detta är inte en startup som jagar tillväxt för sin egen skull. Det är en långsiktig, oberoende ingenjörspraxis, produktifierad.',
+    'about.belief': 'Vi tror att många digitala produkter och företag, särskilt solo eller små sådana, misslyckas inte för att idéerna är dåliga, utan för att de är överkomplicerade, överlovade och beroende av komplexitet eller ständig intervention. Vimerk finns för att göra tvärtom.',
 
     // Projects
     'projects.title': 'Projekt',
