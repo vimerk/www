@@ -6,15 +6,24 @@
     </linearGradient>
   </defs>
 
-  <!-- Simplified hexagon -->
-  <path d="M 16 4 L 28 11 L 28 21 L 16 28 L 4 21 L 4 11 Z"
+  <!-- Dark background for better visibility in browser tabs -->
+  <rect x="0" y="0" width="32" height="32" fill="#0a0f1e"/>
+
+  <!-- Left bracket [ -->
+  <g fill="#cbd5e1">
+    <rect x="4" y="8" width="3" height="16"/>
+    <rect x="4" y="8" width="5" height="3"/>
+    <rect x="4" y="21" width="5" height="3"/>
+  </g>
+
+  <!-- V letterform -->
+  <path d="M 11 8 L 16 20 L 21 8 L 23 8 L 17 24 L 15 24 L 9 8 Z"
         fill="url(#favGradient)"/>
 
-  <!-- V mark in contrasting color -->
-  <path d="M 11 12 L 16 20 L 21 12"
-        stroke="#0f172a"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        fill="none"/>
+  <!-- Right bracket ] -->
+  <g fill="#cbd5e1">
+    <rect x="25" y="8" width="3" height="16"/>
+    <rect x="23" y="8" width="5" height="3"/>
+    <rect x="23" y="21" width="5" height="3"/>
+  </g>
 </svg>
