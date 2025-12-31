@@ -460,9 +460,8 @@ main {
 
 .project-category {
   position: absolute;
-  top: 50%;
+  top: 7px;
   right: 12px;
-  transform: translateY(-50%);
   font-family: monospace;
   font-size: 0.625rem;
   text-transform: uppercase;
