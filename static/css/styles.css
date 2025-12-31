@@ -714,6 +714,11 @@ form::before {
 
 label {
   display: block;
+  margin-bottom: 1.5rem;
+}
+
+.form-grid label {
+  margin-bottom: 0;
 }
 
 label > span:first-child {
