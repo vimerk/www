@@ -271,11 +271,15 @@ function updatePageLanguage(lang) {
     document.title = translations[lang]['meta.title'];
   }
 
-  // Update current language display in dropdown
-  const currentLangDisplay = document.getElementById('current-lang');
-  if (currentLangDisplay) {
-    currentLangDisplay.textContent = lang === 'sv' ? 'Svenska' : 'English';
-  }
+  // Update active language indicator
+  document.querySelectorAll('.lang-option').forEach(option => {
+    const optionLang = option.getAttribute('data-lang');
+    if (optionLang === lang) {
+      option.classList.add('active');
+    } else {
+      option.classList.remove('active');
+    }
+  });
 
   // Save preference
   saveLanguage(lang);
@@ -298,12 +302,6 @@ function initLanguageToggle() {
       e.preventDefault();
       const selectedLang = link.getAttribute('data-lang');
       updatePageLanguage(selectedLang);
-
-      // Close dropdown after selection (Pico.css specific)
-      const dropdown = link.closest('details');
-      if (dropdown) {
-        dropdown.removeAttribute('open');
-      }
     });
   });
 }

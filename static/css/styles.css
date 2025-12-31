@@ -224,76 +224,41 @@ section {
   width: 100%;
 }
 
-/* Language Dropdown */
-.dropdown {
-  position: relative;
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
 }
 
-.dropdown summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 0.5rem 1rem;
-  background: rgba(102, 126, 234, 0.1);
-  border: 1px solid rgba(102, 126, 234, 0.3);
-  border-radius: 2px;
+.lang-option {
   font-family: monospace;
   font-size: 0.875rem;
+  color: #64748b;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.lang-option .lang-code {
   text-transform: uppercase;
-  color: #cbd5e1;
-  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
 }
 
-.dropdown summary::-webkit-details-marker {
-  display: none;
+.lang-option::after {
+  display: none !important;
 }
 
-.dropdown summary::after {
-  content: " ▾";
-  margin-left: 0.5rem;
+.lang-option:hover {
+  color: #94a3b8;
 }
 
-.dropdown summary:hover {
-  background: rgba(102, 126, 234, 0.2);
-  border-color: #667eea;
-}
-
-.dropdown[open] summary {
-  background: rgba(102, 126, 234, 0.2);
-  border-color: #667eea;
-}
-
-.dropdown ul {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
-  min-width: 150px;
-  background: #1e293b;
-  border: 1px solid rgba(102, 126, 234, 0.3);
-  border-radius: 2px;
-  list-style: none;
-  padding: 0.5rem 0;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.dropdown ul li {
-  display: block;
-}
-
-.dropdown ul a {
-  display: block;
-  padding: 0.75rem 1rem;
-  color: #cbd5e1;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.dropdown ul a::after {
-  display: none;
-}
-
-.dropdown ul a:hover {
-  background: rgba(102, 126, 234, 0.2);
+.lang-option.active {
   color: #667eea;
+  font-weight: 700;
+}
+
+.lang-option.active:hover {
+  color: #764ba2;
 }
 
 /* ============================================
@@ -1116,11 +1081,6 @@ button[type="submit"]:hover::before {
   .avoid-callout {
     padding: 1.5rem;
   }
-
-  .dropdown ul {
-    right: auto;
-    left: 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1139,6 +1099,14 @@ button[type="submit"]:hover::before {
 
   .site-header nav ul:last-child li:not(:last-child) {
     display: none;
+  }
+
+  .lang-switcher {
+    gap: 0.5rem;
+  }
+
+  .lang-option {
+    font-size: 0.75rem;
   }
 }
 
