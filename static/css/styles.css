@@ -278,17 +278,6 @@ main {
   position: relative;
 }
 
-.hero::before {
-  content: "001";
-  position: absolute;
-  top: 4rem;
-  left: 0;
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.1em;
-}
-
 .hero h1 {
   position: relative;
   padding-left: 1rem;
@@ -370,17 +359,6 @@ main {
   position: relative;
 }
 
-.about::before {
-  content: "002";
-  position: absolute;
-  top: 1.5rem;
-  left: 0;
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.1em;
-}
-
 .about article {
   background: rgba(30, 41, 59, 0.3);
   border: 1px solid rgba(102, 126, 234, 0.2);
@@ -419,17 +397,6 @@ main {
 #projects {
   padding: 5rem 0;
   position: relative;
-}
-
-#projects::before {
-  content: "003";
-  position: absolute;
-  top: 3.5rem;
-  left: 0;
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.1em;
 }
 
 #projects h2 {
@@ -546,17 +513,6 @@ main {
   position: relative;
 }
 
-#principles::before {
-  content: "004";
-  position: absolute;
-  top: 3.5rem;
-  left: 0;
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.1em;
-}
-
 #principles h2 {
   margin-bottom: 3rem;
 }
@@ -654,17 +610,6 @@ main {
   position: relative;
 }
 
-#updates::before {
-  content: "005";
-  position: absolute;
-  top: 3.5rem;
-  left: 0;
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.1em;
-}
-
 #updates h2 {
   margin-bottom: 2rem;
 }
@@ -721,17 +666,6 @@ main {
 #contact {
   padding: 5rem 0;
   position: relative;
-}
-
-#contact::before {
-  content: "006";
-  position: absolute;
-  top: 3.5rem;
-  left: 0;
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: rgba(102, 126, 234, 0.6);
-  letter-spacing: 0.1em;
 }
 
 #contact hgroup {
@@ -1030,15 +964,6 @@ button[type="submit"]:hover::before {
 
   .site-header nav a {
     font-size: 0.75rem;
-  }
-
-  .hero::before,
-  .about::before,
-  #projects::before,
-  #principles::before,
-  #updates::before,
-  #contact::before {
-    left: 0;
   }
 
   .hero {
