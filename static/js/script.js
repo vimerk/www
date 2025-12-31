@@ -57,7 +57,7 @@ const translations = {
     'principles.scope.desc': 'Each product solves one well-defined problem. Ambiguity is a liability, not a feature.',
 
     'principles.ai.title': 'AI as Tool, Not Identity',
-    'principles.ai.desc': 'Used where it adds genuine leverage. Avoided where deterministic or statistical methods are superior. Never an excuse for opacity.',
+    'principles.ai.desc': 'Used where it adds genuine leverage. Avoided where deterministic or statistical methods are superior. LLM coding agents employed consciously and professionally. Never an excuse for opacity.',
 
     'principles.builttolast.title': 'Built to Last, Not to Exit',
     'principles.builttolast.desc': 'Every project must stand alone economically—able to generate revenue independently or be shut down without threatening the rest.',
@@ -154,7 +154,7 @@ const translations = {
     'principles.scope.desc': 'Varje produkt löser ett väldefinierat problem. Tvetydighet är en skuld, inte en funktion.',
 
     'principles.ai.title': 'AI som Verktyg, Inte Identitet',
-    'principles.ai.desc': 'Används där det ger genuint utnyttjande. Undviks där deterministiska eller statistiska metoder är överlägsna. Aldrig en ursäkt för opacitet.',
+    'principles.ai.desc': 'Används där det ger genuint utnyttjande. Undviks där deterministiska eller statistiska metoder är överlägsna. LLM-kodningsagenter används medvetet och professionellt. Aldrig en ursäkt för opacitet.',
 
     'principles.builttolast.title': 'Byggd för att Bestå, Inte för Exit',
     'principles.builttolast.desc': 'Varje projekt måste stå ekonomiskt självständigt—kunna generera intäkter oberoende eller stängas ner utan att hota resten.',
