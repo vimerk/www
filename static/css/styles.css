@@ -225,7 +225,7 @@ section {
 }
 
 /* Language Switcher */
-.lang-switcher {
+.site-header nav .lang-switcher {
   display: flex;
   gap: 2rem;
   align-items: center;
