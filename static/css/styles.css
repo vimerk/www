@@ -183,16 +183,16 @@ section {
   align-items: center;
   gap: 0.75rem;
   font-family: monospace;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #f8fafc;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .brand img {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.5));
 }
 
@@ -1010,12 +1010,12 @@ button[type="submit"]:hover::before {
 
 @media (max-width: 480px) {
   .brand {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .brand img {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
   }
 
   .site-header nav ul {
