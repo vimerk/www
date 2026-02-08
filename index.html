@@ -93,6 +93,25 @@
       </article>
     </section>
 
+    <!-- Business Model Section -->
+    <section id="business-model">
+      <h2 data-i18n="business.title">Business Model</h2>
+      <div class="grid">
+        <article>
+          <h3 data-i18n="business.offering.title">What We Sell</h3>
+          <p data-i18n="business.offering.desc">Durable API access and specialized software tools for B2B clients. No ads, no data brokerage.</p>
+        </article>
+        <article>
+          <h3 data-i18n="business.billing.title">How Billing Works</h3>
+          <p data-i18n="business.billing.desc">Transparent tiered monthly subscriptions plus usage-based metering for high-volume endpoints.</p>
+        </article>
+        <article>
+          <h3 data-i18n="business.legal.title">Legal Structure</h3>
+          <p data-i18n="business.legal.desc">Vimerk is a registered Swedish sole proprietorship (Enskild firma) based in Uppsala.</p>
+        </article>
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects">
       <h2 data-i18n="projects.title">Projects</h2>
@@ -104,9 +123,24 @@
           <small class="project-category" data-i18n="projects.nomacore.category">Commercial Intelligence API</small>
           <header>
             <h3>Nomacore</h3>
-            <span class="badge" data-i18n="projects.badge.tba">TBA</span>
+            <span class="badge live" data-i18n="projects.badge.live">Live Beta</span>
           </header>
-          <p data-i18n="projects.nomacore.desc">Commercial intelligence API deriving demographic insights from customer names and addresses.</p>
+          <p data-i18n="projects.nomacore.desc">Commercial intelligence API deriving demographic insights from customer names and addresses. Used by e-commerce and marketing teams to enrich customer data without invasive tracking.</p>
+          
+          <div class="project-actions">
+            <a href="/nomacore-api.html" role="button" class="outline" data-i18n="projects.nomacore.btn.demo">View Demo</a>
+            <a href="#contact" role="button" data-i18n="projects.nomacore.btn.invite">Request Invite</a>
+          </div>
+
+          <div class="project-meta">
+            <p>
+              <strong data-i18n="projects.pricing.label">Pricing (Pilot):</strong> 
+              <span data-i18n="projects.nomacore.pricing">Fixed monthly fee. Early adopter discounts available.</span>
+            </p>
+            <p>
+              <a href="/nomacore-api.html" data-i18n="projects.nomacore.docs">API Documentation &rarr;</a>
+            </p>
+          </div>
         </article>
 
         <!-- Stradion -->
@@ -138,6 +172,22 @@
           <p data-i18n="projects.more.desc">Utilities that often begin as internal tools—becoming products only when they prove genuinely useful.</p>
         </article>
       </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap">
+      <h2 data-i18n="roadmap.title">Roadmap</h2>
+      <ul class="roadmap-list">
+        <li>
+          <strong data-i18n="roadmap.2026.year">2026:</strong> <span data-i18n="roadmap.2026">Pilot programs & infrastructure hardening.</span>
+        </li>
+        <li>
+          <strong data-i18n="roadmap.2027.year">2027:</strong> <span data-i18n="roadmap.2027">Broader commercial rollout & self-service tier.</span>
+        </li>
+        <li>
+          <strong data-i18n="roadmap.future.year">Future:</strong> <span data-i18n="roadmap.future">Experimental tools & vertical-specific expansions.</span>
+        </li>
+      </ul>
     </section>
 
     <!-- Principles Section -->
@@ -246,8 +296,15 @@
   <footer class="site-footer">
     <div class="container">
       <p class="footer-tagline" data-i18n="footer.tagline">Independent engineering practice. Uppsala, Sweden. Built to last.</p>
+      <div class="footer-legal">
+        <p>
+          <strong>Vimerk (Enskild firma)</strong><br>
+          Uppsala, Sweden<br>
+          <a href="mailto:www@vimerk.com">www@vimerk.com</a>
+        </p>
+      </div>
       <p>
-        <small>&copy; 2026 Vimerk. <a href="mailto:www@vimerk.com">www@vimerk.com</a></small>
+        <small>&copy; 2026 Vimerk.</small>
       </p>
     </div>
   </footer>

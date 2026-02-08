@@ -1078,3 +1078,162 @@ button[type="submit"]:hover::before {
     display: none;
   }
 }
+
+/* ============================================
+   Business Model Section
+   ============================================ */
+
+#business-model {
+  padding: 5rem 0;
+  position: relative;
+}
+
+#business-model .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+#business-model article {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+#business-model h3 {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+#business-model p {
+  font-size: 0.9375rem;
+  margin-bottom: 0;
+  color: #cbd5e1;
+}
+
+/* ============================================
+   Roadmap Section
+   ============================================ */
+
+#roadmap {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.roadmap-list {
+  list-style: none;
+  max-width: 600px;
+  border-left: 2px solid rgba(102, 126, 234, 0.3);
+  padding-left: 2rem;
+  margin-left: 1rem;
+}
+
+.roadmap-list li {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+  color: #cbd5e1;
+  font-size: 0.9375rem;
+}
+
+.roadmap-list li::before {
+  content: "";
+  position: absolute;
+  left: -2.4rem;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  background: #0a0f1e;
+  border: 2px solid #667eea;
+  border-radius: 50%;
+}
+
+.roadmap-list strong {
+  color: #f8fafc;
+  display: inline-block;
+  min-width: 60px;
+  margin-right: 0.5rem;
+  font-family: monospace;
+}
+
+/* ============================================
+   Project Updates
+   ============================================ */
+
+.badge.live {
+  border-color: #10b981;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.project-actions {
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-actions a[role="button"] {
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  border: 1px solid #667eea;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.project-actions a[role="button"]:hover {
+  background: #667eea;
+  color: #fff;
+}
+
+.project-actions a.outline {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.project-meta {
+  padding: 1rem 1.5rem;
+  background: rgba(10, 15, 30, 0.3);
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
+  font-size: 0.875rem;
+}
+
+.project-meta p {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  color: #94a3b8;
+}
+
+.project-meta p:last-child {
+  margin-bottom: 0;
+}
+
+.project-meta strong {
+  color: #cbd5e1;
+  font-family: monospace;
+}
+
+/* ============================================
+   Footer Updates
+   ============================================ */
+
+.footer-legal {
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.footer-legal strong {
+  color: #94a3b8;
+  font-family: monospace;
+}

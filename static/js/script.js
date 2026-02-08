@@ -17,6 +17,7 @@ const translations = {
     'nav.projects': 'Projects',
     'nav.principles': 'Principles',
     'nav.contact': 'Contact',
+    'nav.back': 'Back to Home',
 
     // Hero
     'hero.headline': 'Vimerk builds small, low-maintenance digital products.',
@@ -29,14 +30,29 @@ const translations = {
     'about.positioning': 'This is not a startup chasing scale for its own sake. It is a long-term, independent engineering practice, productized.',
     'about.belief': 'We believe that many digital products and companies, especially solo or small ones, fail not because the ideas are bad, but because they are overengineered, overpromised, and overdependent on complexity or constant intervention. Vimerk exists to do the opposite.',
 
+    // Business Model
+    'business.title': 'Business Model',
+    'business.offering.title': 'What We Sell',
+    'business.offering.desc': 'Durable API access and specialized software tools for B2B clients. No ads, no data brokerage.',
+    'business.billing.title': 'How Billing Works',
+    'business.billing.desc': 'Transparent tiered monthly subscriptions plus usage-based metering for high-volume endpoints.',
+    'business.legal.title': 'Legal Structure',
+    'business.legal.desc': 'Vimerk is a registered Swedish sole proprietorship (Enskild firma) based in Uppsala.',
+
     // Projects
     'projects.title': 'Projects',
     'projects.intro': 'Small, focused tools solving narrow, well-defined problems.',
     'projects.badge.tba': 'TBA',
     'projects.badge.planned': 'Planned',
+    'projects.badge.live': 'Live Beta',
 
     'projects.nomacore.category': 'Commercial Intelligence API',
-    'projects.nomacore.desc': 'Commercial intelligence API deriving demographic insights from customer names and addresses.',
+    'projects.nomacore.desc': 'Commercial intelligence API deriving demographic insights from customer names and addresses. Used by e-commerce and marketing teams to enrich customer data without invasive tracking.',
+    'projects.nomacore.btn.demo': 'View Demo',
+    'projects.nomacore.btn.invite': 'Request Invite',
+    'projects.pricing.label': 'Pricing (Pilot):',
+    'projects.nomacore.pricing': 'Fixed monthly fee. Early adopter discounts available.',
+    'projects.nomacore.docs': 'API Documentation →',
 
     'projects.stradion.category': 'Applied Machine Learning',
     'projects.stradion.desc': 'Quantitative trading system generating signals and predictions for swing trading strategies.',
@@ -46,6 +62,30 @@ const translations = {
 
     'projects.more.title': 'More Planned',
     'projects.more.desc': 'Utilities that often begin as internal tools—becoming products only when they prove genuinely useful.',
+
+    // Roadmap
+    'roadmap.title': 'Roadmap',
+    'roadmap.2026.year': '2026:',
+    'roadmap.2026': 'Pilot programs & infrastructure hardening.',
+    'roadmap.2027.year': '2027:',
+    'roadmap.2027': 'Broader commercial rollout & self-service tier.',
+    'roadmap.future.year': 'Future:',
+    'roadmap.future': 'Experimental tools & vertical-specific expansions.',
+
+    // Nomacore API Page
+    'nomacore.title': 'Nomacore API - Vimerk',
+    'nomacore.headline': 'Nomacore API',
+    'nomacore.subheadline': 'Commercial intelligence from customer data.',
+    'nomacore.demo.title': 'Live Demo',
+    'nomacore.demo.desc': 'Try the enrichment endpoint with sample data. No API key required for this demo.',
+    'nomacore.form.name': 'Full Name',
+    'nomacore.form.address': 'Address (City/Zip)',
+    'nomacore.form.submit': 'Enrich Data',
+    'nomacore.result.title': 'API Response',
+    'nomacore.docs.title': 'Documentation',
+    'nomacore.docs.desc': 'Send customer details to receive demographic probabilities and commercial flags.',
+    'nomacore.docs.request': 'Request',
+    'nomacore.docs.response': 'Response',
 
     // Principles
     'principles.title': 'Principles',
@@ -112,6 +152,7 @@ const translations = {
     'nav.projects': 'Projekt',
     'nav.principles': 'Principer',
     'nav.contact': 'Kontakt',
+    'nav.back': 'Tillbaka till start',
 
     // Hero
     'hero.headline': 'Vimerk bygger små, lättunderhållna digitala produkter.',
@@ -124,14 +165,29 @@ const translations = {
     'about.positioning': 'Detta är inte en startup som jagar tillväxt för sin egen skull. Det är en långsiktig, oberoende ingenjörspraxis, produktifierad.',
     'about.belief': 'Vi tror att många digitala produkter och företag, särskilt solo eller små sådana, misslyckas inte för att idéerna är dåliga, utan för att de är överkomplicerade, överlovade och beroende av komplexitet eller ständig intervention. Vimerk finns för att göra tvärtom.',
 
+    // Business Model
+    'business.title': 'Affärsmodell',
+    'business.offering.title': 'Vad vi säljer',
+    'business.offering.desc': 'Varaktig API-åtkomst och specialiserade mjukvaruverktyg för B2B-kunder. Ingen reklam, ingen datahandel.',
+    'business.billing.title': 'Hur fakturering fungerar',
+    'business.billing.desc': 'Transparenta nivåbaserade månadsabonnemang plus användningsbaserad mätning för högvolym-endpoints.',
+    'business.legal.title': 'Juridisk struktur',
+    'business.legal.desc': 'Vimerk är en registrerad enskild firma baserad i Uppsala.',
+
     // Projects
     'projects.title': 'Projekt',
     'projects.intro': 'Små, fokuserade verktyg som löser smala, väldefinierade problem.',
     'projects.badge.tba': 'Kommer',
     'projects.badge.planned': 'Planerat',
+    'projects.badge.live': 'Live Beta',
 
     'projects.nomacore.category': 'Kommersiell Intelligens-API',
-    'projects.nomacore.desc': 'Kommersiell intelligens-API som härleder demografiska insikter från kundnamn och adresser.',
+    'projects.nomacore.desc': 'Kommersiell intelligens-API som härleder demografiska insikter från kundnamn och adresser. Används av e-handel och marknadsföringsteam för att berika kunddata utan invasiv spårning.',
+    'projects.nomacore.btn.demo': 'Se Demo',
+    'projects.nomacore.btn.invite': 'Begär Inbjudan',
+    'projects.pricing.label': 'Prissättning (Pilot):',
+    'projects.nomacore.pricing': 'Fast månadsavgift. Rabatter för tidiga kunder tillgängliga.',
+    'projects.nomacore.docs': 'API Dokumentation →',
 
     'projects.stradion.category': 'Tillämpad Maskininlärning',
     'projects.stradion.desc': 'Kvantitativt handelssystem som genererar signaler och prediktioner för swing trading-strategier.',
@@ -141,6 +197,30 @@ const translations = {
 
     'projects.more.title': 'Fler planerade',
     'projects.more.desc': 'Verktyg som ofta börjar som interna projekt—blir produkter endast när de visar sig genuint användbara.',
+
+    // Roadmap
+    'roadmap.title': 'Färdplan',
+    'roadmap.2026.year': '2026:',
+    'roadmap.2026': 'Pilotprogram & infrastrukturhärdning.',
+    'roadmap.2027.year': '2027:',
+    'roadmap.2027': 'Bredare kommersiell utrullning & självbetjäningsnivå.',
+    'roadmap.future.year': 'Framtid:',
+    'roadmap.future': 'Experimentella verktyg & vertikalspecifika expansioner.',
+
+    // Nomacore API Page
+    'nomacore.title': 'Nomacore API - Vimerk',
+    'nomacore.headline': 'Nomacore API',
+    'nomacore.subheadline': 'Kommersiell intelligens från kunddata.',
+    'nomacore.demo.title': 'Live Demo',
+    'nomacore.demo.desc': 'Prova beriknings-endpointen med exempeldata. Ingen API-nyckel krävs för denna demo.',
+    'nomacore.form.name': 'Fullständigt namn',
+    'nomacore.form.address': 'Adress (Ort/Postnummer)',
+    'nomacore.form.submit': 'Berika data',
+    'nomacore.result.title': 'API-svar',
+    'nomacore.docs.title': 'Dokumentation',
+    'nomacore.docs.desc': 'Skicka kunduppgifter för att ta emot demografiska sannolikheter och kommersiella flaggor.',
+    'nomacore.docs.request': 'Förfrågan',
+    'nomacore.docs.response': 'Svar',
 
     // Principles
     'principles.title': 'Principer',

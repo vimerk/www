@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nomacore.title">Nomacore API - Vimerk</title>
+  <meta name="description" content="Commercial intelligence API documentation and demo.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <style>
+    /* Minimal extra styles for the API page */
+    .api-endpoint {
+      font-family: monospace;
+      background: var(--card-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      border: 1px solid var(--card-border);
+    }
+    .method {
+      color: #667eea;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    pre {
+      background: #0f172a;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      border: 1px solid var(--card-border);
+    }
+    code {
+      color: #cbd5e1;
+    }
+    .demo-result {
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      background: var(--card-bg);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container">
+      <ul>
+        <li>
+          <a href="/" class="brand">
+            <img src="/static/img/logo.svg" alt="Vimerk logo" width="40" height="40">
+            <strong>Vimerk</strong>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="/" data-i18n="nav.back">Back to Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <hgroup>
+      <h1 data-i18n="nomacore.headline">Nomacore API</h1>
+      <p data-i18n="nomacore.subheadline">Commercial intelligence from customer data.</p>
+    </hgroup>
+
+    <section>
+      <h2 data-i18n="nomacore.demo.title">Live Demo</h2>
+      <p data-i18n="nomacore.demo.desc">Try the enrichment endpoint with sample data. No API key required for this demo.</p>
+      
+      <div class="grid">
+        <div>
+          <form id="demo-form">
+            <label for="name" data-i18n="nomacore.form.name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g., Johan Johansson" required>
+            
+            <label for="address" data-i18n="nomacore.form.address">Address (City/Zip)</label>
+            <input type="text" id="address" name="address" placeholder="e.g., 753 20 Uppsala" required>
+            
+            <button type="submit" data-i18n="nomacore.form.submit">Enrich Data</button>
+          </form>
+        </div>
+        <div>
+          <div id="result" class="demo-result">
+            <h4 data-i18n="nomacore.result.title">API Response</h4>
+            <pre><code id="json-output"></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-i18n="nomacore.docs.title">Documentation</h2>
+      
+      <div class="api-endpoint">
+        <span class="method">POST</span> /v1/enrich
+      </div>
+
+      <p data-i18n="nomacore.docs.desc">Send customer details to receive demographic probabilities and commercial flags.</p>
+
+      <h3 data-i18n="nomacore.docs.request">Request</h3>
+      <pre><code>curl -X POST https://api.vimerk.com/v1/enrich \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Johan Johansson",
+    "address": "753 20 Uppsala",
+    "country": "SE"
+  }'</code></pre>
+
+      <h3 data-i18n="nomacore.docs.response">Response</h3>
+      <pre><code>{
+  "status": "success",
+  "data": {
+    "demographics": {
+      "gender": "male",
+      "confidence": 0.98,
+      "age_bracket": "35-45"
+    },
+    "location": {
+      "type": "residential",
+      "income_decile": 7,
+      "urban_density": "high"
+    },
+    "commercial_flags": {
+      "is_business": false,
+      "is_pobox": false
+    }
+  },
+  "meta": {
+    "request_id": "req_12345abc",
+    "latency_ms": 45
+  }
+}</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><small>&copy; 2026 Vimerk.</small></p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mock demo
+    document.getElementById('demo-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const address = document.getElementById('address').value;
+      
+      // Mock logic for demo purposes
+      const mockResponse = {
+        status: "success",
+        data: {
+          demographics: {
+            gender: "inferred",
+            confidence: 0.85 + (Math.random() * 0.1),
+            age_bracket: "unknown"
+          },
+          location: {
+            type: "residential",
+            income_decile: 6,
+            context: address.includes('Uppsala') ? "urban" : "regional"
+          },
+          input: {
+            name: name,
+            address: address
+          }
+        }
+      };
+
+      document.getElementById('json-output').textContent = JSON.stringify(mockResponse, null, 2);
+      document.getElementById('result').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
