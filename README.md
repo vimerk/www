@@ -42,7 +42,7 @@ This is a single-page static site deployed on Cloudflare Pages, showcasing Vimer
 
 **Project portfolio:**
 - Nomacore (TBA)
-- Talaria (TBA, with minimal financial disclaimer)
+- Stradion (TBA, with minimal financial disclaimer)
 - TinyFutures (TBA, framed as "playful family photo tool")
 - Futhark Foundry (Nordic/Viking initiative, TBA)
 - Antares Astrologica (Astrology initiative, TBA)
@@ -195,7 +195,7 @@ To update content:
 
 ## Future Considerations
 
-- Individual project pages (e.g., `/talaria/`) when ready
+- Individual project pages (e.g., `/stradion/`) when ready
 - Social media links when accounts are live
 - Newsletter signup (if needed)
 - Blog/updates section (if needed)

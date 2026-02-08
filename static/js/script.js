@@ -38,8 +38,8 @@ const translations = {
     'projects.nomacore.category': 'Commercial Intelligence API',
     'projects.nomacore.desc': 'Commercial intelligence API deriving demographic insights from customer names and addresses.',
 
-    'projects.talaria.category': 'Applied Machine Learning',
-    'projects.talaria.desc': 'Quantitative trading system generating signals and predictions for swing trading strategies.',
+    'projects.stradion.category': 'Applied Machine Learning',
+    'projects.stradion.desc': 'Quantitative trading system generating signals and predictions for swing trading strategies.',
 
     'projects.tinyfutures.category': 'AI-Assisted Photography',
     'projects.tinyfutures.desc': 'Playful tool to visualize how babies and young children might look as adults.',
@@ -133,8 +133,8 @@ const translations = {
     'projects.nomacore.category': 'Kommersiell Intelligens-API',
     'projects.nomacore.desc': 'Kommersiell intelligens-API som härleder demografiska insikter från kundnamn och adresser.',
 
-    'projects.talaria.category': 'Tillämpad Maskininlärning',
-    'projects.talaria.desc': 'Kvantitativt handelssystem som genererar signaler och prediktioner för swing trading-strategier.',
+    'projects.stradion.category': 'Tillämpad Maskininlärning',
+    'projects.stradion.desc': 'Kvantitativt handelssystem som genererar signaler och prediktioner för swing trading-strategier.',
 
     'projects.tinyfutures.category': 'AI-Assisterad Fotografi',
     'projects.tinyfutures.desc': 'Lekfullt verktyg för att visualisera hur bebisar och småbarn kan se ut som vuxna.',
